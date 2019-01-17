@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+
+      <div class="row">
+        <div class="col-lg-12">
+
+          <h1 class="text-center" id="dapp-name"></h1>
+          <hr/>
+          <br/>
+          <strong><p id="accountAddress" class="text-center"></p></strong>  
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div class="row">
+            <p><strong>Your Number of Messages:</strong></p>
+            <p id="number-messages"></p>
+            <p><strong>Your Latest Message:</strong></p>
+            <p id="latest-message">Your Message Here</p>
+            <p><strong>From Address:</strong></p>
+            <p id="latest-address"></p>
+            <p><strong>Was it sent encrypted:</strong></p>
+            <p id="latest-encrypted">false</p>
+            
+            
+
+
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr/>
+            
+          </div>
+        </div>
+
+
+        <form onSubmit="App.castVote(); return false;">
+          <div class="form-group">
+            <label for="candidatesSelect">Select Candidate</label>
+            <select class="form-control" id="candidatesSelect">
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Vote</button>
+          <hr />
+        </form>
+
+        <form onSubmit="App.castVote(); return false;">
+          <div class="form-group">
+            <label for="candidatesSelect">Select Candidate</label>
+            <select class="form-control" id="candidatesSelect">
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Vote</button>
+          <hr />
+        </form>
+
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/bundle.js" type="module"></script>
+  </body>
+</html>

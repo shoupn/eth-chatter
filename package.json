@@ -1,0 +1,43 @@
+{
+  "name": "eth-chatter",
+  "version": "0.0.1",
+  "description": "dApp using Etherum Blockchain for sending and receiving encrypted messages",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "build": "browserify --debug src/js/app.js -o src/js/bundle.js",
+    "watch": "watchify index.js -o src/js/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "author": "nShoup",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "eth-crypto": "^1.3.2",
+    "jquery": "^3.3.1",
+    "reading-time": "^1.1.3",
+    "truffle-contract": "^4.0.2",
+    "watchify": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "lite-server": "^2.3.0"
+  }
+}
